@@ -17,3 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 document.getElementById("welcome").innerText = message;
             });
+
+// keeping the secret message
+localStorage.setItem("It's a secret to everybody.", "Here, take this. It's dangerous to go alone! 🎮");
