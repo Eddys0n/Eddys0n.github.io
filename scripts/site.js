@@ -76,4 +76,37 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 3000);
+//todo list
 
+const addButton = document.getElementById('button')
+const tasks = document.getElementById('task')
+const list = document.getElementById('todo-list')
+
+function taskElement(task){
+    const listItem = document.createElement('li');
+    listItem.textContent = task
+    list.appendChild(listItem)
+}
+
+function addTask(){
+    const task = tasks.value.trim();
+    if(task){
+        taskElement(task);
+        tasks.value = '';
+        saveTask();
+    }
+    else{
+        alert('enter a task')
+    }
+}
+
+addButton.addEventListener('click', addTask);
+
+// Get the list to local storage
+function saveTask(){
+    let taskItem = [];
+    list.querySelectorAll('li').forEach(function(item){
+        taskItem.push(item.textContent.trim());
+    });
+    localStorage.setItem('taskItem', JSON.stringify(taskItem))
+}
