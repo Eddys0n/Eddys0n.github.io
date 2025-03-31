@@ -19,79 +19,12 @@ body{
     border-radius: 35px;
 }
 
-
-.btn {
-    position:initial;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: 0.3s;
-}
-.carrusel {
-    
-    position:relative ;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carrusel-inner {
+#buttons {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carrusel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carrusel-item img {
-    width: 100%;
-    display: block;
-}
-
-.carrusel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-}
-
-.carrusel-control.prev {
-    left: 10px;
-}
-
-.carrusel-control.next {
-    right: 10px;
-}
-
-.carrusel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 #buttons {
@@ -123,4 +56,27 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #555;
+}
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+#carousel img {
+    max-height: 300px;
+    aspect-ratio: auto 300 / 400;
+    border-radius: 10px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }

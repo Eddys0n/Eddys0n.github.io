@@ -20,93 +20,95 @@ document.getElementById("welcome").innerText = message;
 
 // keeping the secret message
 localStorage.setItem("It's a secret to everybody.", "Here, take this. It's dangerous to go alone!");
-// pictures
-const images = [
-    "https://wallpapers.com/images/hd/world-of-warcraft-restoration-druid-healing-69ucodb01a3oyfab.webp",
-    "https://wallpapers.com/images/high/sylvanas-windrunner-q892cabxvp1kerna.webp",
-    "https://wallpapers.com/images/high/warcraft-2-86orjm2qwgsq561i.webp",
-    "https://wallpapers.com/images/high/warcraft-2-2400-x-1350-wxluvbbro072yvzu.webp"
-];
+//carousel
+const urls = [
+    'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+].map(url => { (new Image()).src = url; return url })
 
-const carruselInner = document.querySelector('.carrusel-inner');
+const images = document.querySelectorAll('#carousel img')
 
-// function to add pictures
-function loadImages() {
+let currentImage = 0
+const showImages = () => {
+    const offset = currentImage % urls.length
     images.forEach((image, index) => {
-        const item = document.createElement('div');
-        item.classList.add('carrusel-item');
-        if (index === 0) item.classList.add('active'); // First active picture
-
-        const img = document.createElement('img');
-        img.src = image;
-        img.alt = `Imagen ${index + 1}`;
-
-        item.appendChild(img);
-        carruselInner.appendChild(item);
-    });
+        const imageIndex = (index + offset + urls.length) % urls.length
+        image.src = urls[imageIndex]
+    })
 }
 
-// calling the function to the images
-loadImages();
+showImages()
 
-let currentIndex = 0;
+setInterval(() => {
+    currentImage += 1
+    showImages()
+}, 3000)
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carrusel-item');
-    const totalSlides = slides.length;
+const buttonCarouselPrev = document.getElementById('prev')
+const buttonCarouselNext = document.getElementById('next')
 
-    if (index >= totalSlides) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = totalSlides - 1;
-    } else {
-        currentIndex = index;
-    }
+buttonCarouselNext.addEventListener('click', () => {
+    currentImage += 1
+    showImages()
+})
 
-    const offset = -currentIndex * 100;
-    carruselInner.style.transform = `translateX(${offset}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-setInterval(nextSlide, 3000);
+buttonCarouselPrev.addEventListener('click',()=>{
+    currentImage -= 1
+    showImages()
+})
 //todo list
 
-const addButton = document.getElementById('button')
-const tasks = document.getElementById('task')
-const list = document.getElementById('todo-list')
+// Get the list from local storage
+const todos = JSON.parse(localStorage.getItem('todo-list')) || []
 
-function taskElement(task){
-    const listItem = document.createElement('li');
-    listItem.textContent = task
-    list.appendChild(listItem)
-}
+const todoButton = document.getElementById('todo')
+const inputTodo = document.getElementById('new-todo')
+const todoList = document.getElementById('listaTodo')
 
-function addTask(){
-    const task = tasks.value.trim();
-    if(task){
-        taskElement(task);
-        tasks.value = '';
-        saveTask();
-    }
-    else{
-        alert('enter a task')
-    }
-}
-
-addButton.addEventListener('click', addTask);
-
-// Get the list to local storage
-function saveTask(){
-    let taskItem = [];
-    list.querySelectorAll('li').forEach(function(item){
-        taskItem.push(item.textContent.trim());
+const renderTodos = () => {
+    todos.forEach(todo => {
+        const li = document.createElement('li')
+        li.textContent = todo.text
+        todoList.append(li)
     });
-    localStorage.setItem('taskItem', JSON.stringify(taskItem))
 }
+todoButton.addEventListener('click', ()=>{
+    // Add a new item to the list
+    todos.push({ text: inputTodo.value, completed: false })
+    // Save the list to local storage
+    localStorage.setItem('todo-list', JSON.stringify(todos))
+    // Clear the li's before we recreate them
+    todoList.innerHTML = ''
+    renderTodos()
+})
+
+renderTodos()
+
+//POKEMON HOMEWORK
+
+const getRandomPokemon = async()=>{
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+    const response = await fetch(url)   
+    const json = await response.json()
+    return json
+}
+const renderPokemon = async(pokemonParam)=>{
+    console.log(pokemonParam)
+    //create element img
+    const img = document.createElement('img')
+    //insert data to the element img
+    img.src = pokemonParam.sprites.front_default
+    img.alt = pokemonParam.name
+    //set the img to the DOM at the last div that was created
+    const pokemonElement = document.getElementById('pokemon')
+    pokemonElement.append(img)
+}
+
+const initPage = async () => {
+    const randomPokemon = await getRandomPokemon()
+    renderPokemon(randomPokemon)
+}
+initPage()
