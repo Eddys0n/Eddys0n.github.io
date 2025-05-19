@@ -8,49 +8,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero" id="inicio">
         <div class="overlay">
             <h1>Soluciones Profesionales en Roofing, Siding e Interiores</h1>
                 <p>Calidad, seguridad y confianza en todo Wisconsin</p>
                     <a href="#contacto" class="btn">Solicita tu Cotización</a>
         </div>    
     </header>    
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <!--NAVBAR-->
+ <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Construcción Co.</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+  <!-- Sección Servicios -->
     <section id="servicios" class="section">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/roof-icon.png" alt="Roofing" width="64" height="64">
-        <h3>Roofing</h3>
+        <img src="img/roofing.jpg" alt="Roofing" width="64" height="64">
         <h3>Roofing</h3>
         <p>Instalación, reparación e inspección de techos resistentes y duraderos.</p>
       </div>
       <div class="card">
-        <img src="img/roof-icon.png" alt="Siding" width="64" height="64">
+        <img src="img/siding.jpg" alt="Siding" width="64" height="64">
         <h3>Siding</h3>
         <p>Revestimientos modernos y eficientes para proteger tu hogar o negocio.</p>
       </div>
       <div class="card">
-        <img src="img/roof-icon.png" alt="Interior" width="64" height="64">
+        <img src="img/interior.jpg" alt="Interior" width="64" height="64">
         <h3>Interiores</h3>
         <p>Remodelaciones de cocinas, baños, pisos y acabados con alto nivel de detalle.</p>
       </div>
     </div>
   </section>
-<footer id="contacto" class="footer">
-    <h2>Contact Us</h2>
+    <!-- Secciones vacías para scroll correcto -->
+  <section id="Proyectos">
+  <h2>Proyectos</h2>
+    <p>Próximamente...</p>
+    </section>
+  <section id="Nosotros">
+  <h2>Nosotros</h2>
+    <p>Somos un equipo con años de experiencia en techado, revestimientos y remodelaciones.</p>
+</section>
+     <section id="contacto" class="section">
+    <h2>Contacto</h2>
     <p>Tel: (920) 123 4567 | Email: info@wisconsin.prueba.com</p>
-    <p>Address: Neenah, Wisconsin</p>
-    <p>&copy; 2025 Wisconsin Construction Co.</p>
+    <p>Dirección: Neenah, Wisconsin</p>
+  </section>
+<footer class="footer">
+      <p>&copy; 2025 Medina's Team Roofing & Construction</p>
 </footer>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
