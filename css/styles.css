@@ -1,82 +1,151 @@
-body{
-    display: flex;
-    justify-content: center;
+/* Fuente general */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Encabezado principal */
+.hero {
+  background: url('img/medinasRoofing.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: #e63946;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d62828;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #f1c40f;
+}
+
+/* Secciones */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2a2a2a;
+}
+
+/* Tarjetas de servicios */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    margin: 0px;
-    padding: 0%;
-    background-color: azure;
-    
-}
-#wrapper{
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: beige;
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 35px;
-}
+  }
 
-#buttons {
-    display: flex;
-    justify-content: center;
+  .navbar ul {
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
+  }
 
-#buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: green;
-    overflow: hidden;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-}
-#carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: 300px;
-    overflow: hidden;
-    gap: 10px;
-}
-
-#carousel img {
-    max-height: 300px;
-    aspect-ratio: auto 300 / 400;
-    border-radius: 10px;
-}
-
-#buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+  .navbar li {
+    margin: 0.5rem 0;
+  }
 }
