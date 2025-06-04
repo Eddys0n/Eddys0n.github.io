@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medina's Team Roofing & Construction</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | ProFinish Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">  
 </head>
-<body>
-    <header class="hero" id="inicio">
-        <div class="overlay">
-            <h1>Soluciones Profesionales en Roofing, Siding e Interiores</h1>
-                <p>Calidad, seguridad y confianza en todo Wisconsin</p>
-                    <a href="#contacto" class="btn">Solicita tu Cotización</a>
-        </div>    
-    </header>    
-    <!--NAVBAR-->
- <nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">Construcción Co.</div>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+<body id="top">
+
+  <header>
+     <img src="img/logo.png" alt="5 Star Remodeling LLC Logo" class="logo-img">
+  </header>
+
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>ProFinish Construction is a family-owned and operated company based in Wisconsin, proudly serving residential and commercial clients with integrity and craftsmanship.</p>
+      <p>With years of experience in the industry, our mission is to deliver high-quality results in every project we undertake—from expert painting and drywall installation to custom cabinetry and power washing services.</p>
+      <p>We take pride in our attention to detail, clear communication, and commitment to customer satisfaction. Our team treats every home and business as if it were our own, ensuring dependable service and exceptional finishes.</p>
+    </div>
+    <div class="about-image">
+      <img src="img/teamwork.png" alt="Our Team at Work">
+    </div>
   </div>
-</nav>
-  <!-- Sección Servicios -->
-    <section id="servicios" class="section">
-    <h2>Nuestros Servicios</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="img/roofing.jpg" alt="Roofing" width="64" height="64">
-        <h3>Roofing</h3>
-        <p>Instalación, reparación e inspección de techos resistentes y duraderos.</p>
-      </div>
-      <div class="card">
-        <img src="img/siding.jpg" alt="Siding" width="64" height="64">
-        <h3>Siding</h3>
-        <p>Revestimientos modernos y eficientes para proteger tu hogar o negocio.</p>
-      </div>
-      <div class="card">
-        <img src="img/interior.jpg" alt="Interior" width="64" height="64">
-        <h3>Interiores</h3>
-        <p>Remodelaciones de cocinas, baños, pisos y acabados con alto nivel de detalle.</p>
-      </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="https://source.unsplash.com/80x80/?paint,brush" alt="Painting Icon">
+      <h3>Painting</h3>
+      <p>High quality interior and exterior painting.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/80x80/?drywall,wall" alt="Drywall Icon">
+      <h3>Drywall</h3>
+      <p>Installation and repair of drywall panels.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/80x80/?cabinet,kitchen" alt="Cabinet Icon">
+      <h3>Cabinets</h3>
+      <p>Design and installation of custom cabinets.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/80x80/?pressure,wash" alt="Power Washing Icon">
+      <h3>Power Washing</h3>
+      <p>Effective exterior cleaning with water pressure.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?paint,home" alt="Painting">
+      <img src="https://source.unsplash.com/400x300/?drywall" alt="Drywall">
+      <img src="https://source.unsplash.com/400x300/?cabinet,kitchen" alt="Cabinets">
+      <img src="https://source.unsplash.com/400x300/?pressure,wash" alt="Power Washing">
     </div>
   </section>
-    <!-- Secciones vacías para scroll correcto -->
-  <section id="Proyectos">
-  <h2>Proyectos</h2>
-    <p>Próximamente...</p>
-    </section>
-  <section id="Nosotros">
-  <h2>Nosotros</h2>
-    <p>Somos un equipo con años de experiencia en techado, revestimientos y remodelaciones.</p>
-</section>
-     <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>Tel: (920) 123 4567 | Email: info@wisconsin.prueba.com</p>
-    <p>Dirección: Neenah, Wisconsin</p>
-  </section>
-<footer class="footer">
-      <p>&copy; 2025 Medina's Team Roofing & Construction</p>
-</footer>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <form class="contact-form" action="https://formspree.io/f/movwvljl" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" id="submitBtn">Send Message</button>
+  </form>
+</section>
+
+  <footer>
+    <p>&copy; 2025 ProFinish Construction. All rights reserved.</p>
+  </footer>
+ <!-- Lightbox Script Placeholder -->
+<script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+  const form = document.querySelector('.contact-form');
+  const button = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Message sent successfully!');
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    });
   });
 </script>
-
 </body>
 </html>
+
