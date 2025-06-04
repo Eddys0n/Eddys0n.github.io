@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | ProFinish Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
 
   <header>
-     <img src="img/logo.png" alt="5 Star Remodeling LLC Logo" class="logo-img">
+    <img src="img/logo.png" alt="5 Star Remodeling LLC Logo" class="logo-img">
   </header>
 
   <nav>
@@ -21,45 +21,45 @@
     <a href="#contact">Contact</a>
   </nav>
 
-<section id="about">
-  <h2 class="section-title">About Us</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>ProFinish Construction is a family-owned and operated company based in Wisconsin, proudly serving residential and commercial clients with integrity and craftsmanship.</p>
-      <p>With years of experience in the industry, our mission is to deliver high-quality results in every project we undertake—from expert painting and drywall installation to custom cabinetry and power washing services.</p>
-      <p>We take pride in our attention to detail, clear communication, and commitment to customer satisfaction. Our team treats every home and business as if it were our own, ensuring dependable service and exceptional finishes.</p>
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>ProFinish Construction is a family-owned and operated company based in Wisconsin, proudly serving residential and commercial clients with integrity and craftsmanship.</p>
+        <p>With years of experience in the industry, our mission is to deliver high-quality results in every project we undertake—from expert painting and drywall installation to custom cabinetry and power washing services.</p>
+        <p>We take pride in our attention to detail, clear communication, and commitment to customer satisfaction. Our team treats every home and business as if it were our own, ensuring dependable service and exceptional finishes.</p>
+      </div>
+      <div class="about-image">
+        <img src="img/teamwork.png" alt="Our Team at Work">
+      </div>
     </div>
-    <div class="about-image">
-      <img src="img/teamwork.png" alt="Our Team at Work">
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="services">
-  <h2 class="section-title">Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <img src="https://source.unsplash.com/80x80/?paint,brush" alt="Painting Icon">
-      <h3>Painting</h3>
-      <p>High quality interior and exterior painting.</p>
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/2907/2907987.png" alt="Painting Icon">
+        <h3>Painting</h3>
+        <p>High-quality interior and exterior painting.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/3159/3159066.png" alt="Drywall Icon">
+        <h3>Drywall</h3>
+        <p>Installation and repair of drywall panels.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/1720/1720922.png" alt="Cabinets Icon">
+        <h3>Cabinets</h3>
+        <p>Design and installation of custom cabinets.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/2674/2674072.png" alt="Power Washing Icon">
+        <h3>Power Washing</h3>
+        <p>Effective exterior cleaning with water pressure.</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/80x80/?drywall,wall" alt="Drywall Icon">
-      <h3>Drywall</h3>
-      <p>Installation and repair of drywall panels.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/80x80/?cabinet,kitchen" alt="Cabinet Icon">
-      <h3>Cabinets</h3>
-      <p>Design and installation of custom cabinets.</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/80x80/?pressure,wash" alt="Power Washing Icon">
-      <h3>Power Washing</h3>
-      <p>Effective exterior cleaning with water pressure.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="gallery">
     <h2 class="section-title">Gallery</h2>
@@ -71,74 +71,82 @@
     </div>
   </section>
 
-<section id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <form class="contact-form" action="https://formspree.io/f/movwvljl" method="POST">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-    <button type="submit" id="submitBtn">Send Message</button>
-  </form>
-</section>
+  <!-- Lightbox container -->
+  <div id="lightbox">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded Image">
+  </div>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" id="submitBtn">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 ProFinish Construction. All rights reserved.</p>
   </footer>
- <!-- Lightbox Script Placeholder -->
-<script>
-  // Lightbox functionality
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeBtn = document.getElementById('lightbox-close');
 
-  document.querySelectorAll('.gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
+  <!-- Lightbox Script Placeholder -->
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
     });
-  });
 
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg) {
+    closeBtn.addEventListener('click', () => {
       lightbox.style.display = 'none';
-    }
-  });
-  const form = document.querySelector('.contact-form');
-  const button = document.getElementById('submitBtn');
+    });
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('Message sent successfully!');
-        form.reset();
-      } else {
-        alert('Something went wrong. Please try again.');
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
       }
     });
-  });
-</script>
+
+    // Contact form submission
+    const form = document.querySelector('.contact-form');
+    const button = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Message sent successfully!');
+          form.reset();
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
